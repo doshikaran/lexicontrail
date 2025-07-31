@@ -16,6 +16,7 @@ LexiconTrail is a cutting-edge agentic AI system that leverages the latest resea
 ### 🎯 Key Innovation
 
 LexiconTrail implements a novel multi-agent orchestration pattern that combines:
+
 - **NVIDIA's SLM Research**: Utilizing small, specialized language models for specific tasks
 - **LlamaIndex Advanced Features**: Leveraging semantic search, knowledge graphs, and multi-modal indexing
 - **Efficient Agent Orchestration**: Proprietary routing and coordination mechanisms
@@ -29,33 +30,33 @@ graph TB
     subgraph "User Interface"
         UI[Web/API Interface]
     end
-    
+
     subgraph "Agent Orchestration Layer"
         AO[Agent Orchestrator]
         AR[Agent Router]
         AM[Agent Monitor]
     end
-    
+
     subgraph "SLM Agent Pool"
         A1[Document Analysis SLM]
         A2[Query Understanding SLM]
         A3[Response Generation SLM]
         A4[Fact Verification SLM]
     end
-    
+
     subgraph "LlamaIndex Integration"
         LI[LlamaIndex Core]
         VS[Vector Store]
         KG[Knowledge Graph]
         MM[Multi-Modal Index]
     end
-    
+
     subgraph "Data Layer"
         DS[Document Store]
         CS[Cache System]
         MS[Metadata Store]
     end
-    
+
     UI --> AO
     AO --> AR
     AR --> A1 & A2 & A3 & A4
@@ -74,25 +75,25 @@ graph LR
         QA[Query Analyzer]
         CT[Context Builder]
     end
-    
+
     subgraph "Agent Selection"
         AS[Agent Selector]
         AL[Agent Loader]
         AC[Agent Config]
     end
-    
+
     subgraph "Execution Engine"
         EE[Execution Controller]
         PM[Performance Monitor]
         RM[Resource Manager]
     end
-    
+
     subgraph "Output Generation"
         RG[Response Generator]
         QC[Quality Controller]
         OF[Output Formatter]
     end
-    
+
     IP --> QA --> CT --> AS
     AS --> AL --> AC --> EE
     EE --> PM & RM --> RG
@@ -102,22 +103,26 @@ graph LR
 ## 🌟 Features
 
 ### 1. **Intelligent Agent Routing**
+
 - Dynamic selection of specialized SLMs based on task requirements
 - Real-time performance optimization
 - Automatic failover and redundancy
 
 ### 2. **Advanced LlamaIndex Integration**
+
 - **Semantic Search**: Multi-level semantic indexing with custom embeddings
 - **Knowledge Graphs**: Dynamic knowledge graph construction and querying
 - **Multi-Modal Support**: Text, image, and structured data processing
 - **Hybrid Search**: Combining vector, keyword, and graph-based retrieval
 
 ### 3. **Performance Optimization**
+
 - 10x faster response times compared to traditional LLM approaches
 - 90% reduction in computational resources
 - Intelligent caching and pre-computation strategies
 
 ### 4. **Scalability Features**
+
 - Horizontal scaling of agent pools
 - Distributed processing capabilities
 - Cloud-native architecture
@@ -125,12 +130,14 @@ graph LR
 ## 📊 Performance Benchmarks
 
 ### Response Time Comparison
+
 ```
 Traditional LLM Approach: ████████████████████████ 2400ms
 LexiconTrail with SLMs:   ████ 240ms
 ```
 
 ### Resource Utilization
+
 ```
 Memory Usage:
 - Traditional: 32GB
@@ -142,16 +149,18 @@ GPU Utilization:
 ```
 
 ### Accuracy Metrics
-| Task Type | Traditional LLM | LexiconTrail | Improvement |
-|-----------|-----------------|--------------|-------------|
-| Document QA | 87% | 94% | +8% |
-| Fact Verification | 82% | 96% | +17% |
-| Multi-hop Reasoning | 76% | 89% | +17% |
-| Response Relevance | 88% | 95% | +8% |
+
+| Task Type           | Traditional LLM | LexiconTrail | Improvement |
+| ------------------- | --------------- | ------------ | ----------- |
+| Document QA         | 87%             | 94%          | +8%         |
+| Fact Verification   | 82%             | 96%          | +17%        |
+| Multi-hop Reasoning | 76%             | 89%          | +17%        |
+| Response Relevance  | 88%             | 95%          | +8%         |
 
 ## 🛠️ Technology Stack
 
 ### Core Technologies
+
 - **LlamaIndex**: Advanced indexing and retrieval
 - **NVIDIA SLMs**: Specialized small language models
 - **Python 3.8+**: Core implementation language
@@ -160,6 +169,7 @@ GPU Utilization:
 - **PostgreSQL**: Metadata and configuration storage
 
 ### LlamaIndex Components Used
+
 - `VectorStoreIndex`: For semantic search capabilities
 - `KnowledgeGraphIndex`: For relationship mapping
 - `MultiModalVectorStoreIndex`: For mixed content types
@@ -172,6 +182,7 @@ GPU Utilization:
 ## 🚀 Getting Started
 
 ### Prerequisites
+
 ```bash
 python >= 3.8
 pip >= 21.0
@@ -227,21 +238,25 @@ Try our interactive demos:
 ## 📈 Use Cases
 
 ### 1. **Enterprise Document Intelligence**
+
 - Process thousands of documents in minutes
 - Extract insights across multiple data sources
 - Maintain compliance and audit trails
 
 ### 2. **Research & Development**
+
 - Literature review automation
 - Patent analysis and prior art search
 - Technical documentation querying
 
 ### 3. **Customer Support Automation**
+
 - Intelligent ticket routing
 - Knowledge base querying
 - Multi-language support
 
 ### 4. **Legal Document Analysis**
+
 - Contract review and comparison
 - Regulatory compliance checking
 - Case law research
@@ -288,44 +303,3 @@ const result = await lt.query('Explain quantum computing');
 - **90% Cost Reduction**: Dramatically lower computational requirements
 - **Enterprise Adoption**: Successfully deployed in Fortune 500 companies
 - **Research Recognition**: Featured in AI/ML conferences and publications
-
-## 👥 About The AI Cowboys
-
-[The AI Cowboys](https://theaicowboys.com) is a cutting-edge AI consultancy specializing in building production-grade AI systems. Founded by industry veterans with decades of combined experience in AI/ML, distributed systems, and enterprise software.
-
-### Our Expertise
-- 🤖 Agentic AI Systems
-- 🧠 Large Language Models
-- 📊 Knowledge Graphs
-- 🔍 Semantic Search
-- ⚡ High-Performance Computing
-
-## 📬 Contact
-
-- **Email**: m_pendleton@theaicowboys.com
-- **LinkedIn**: [Michael Pendleton](https://www.linkedin.com/in/michael-j-pendleton/)
-- **Company**: [The AI Cowboys](https://www.linkedin.com/company/the-ai-cowboys/)
-
-## 🤝 Contributing
-
-While the core LexiconTrail engine remains proprietary, we welcome contributions to:
-- Documentation improvements
-- Example implementations
-- Integration guides
-- Bug reports and feature requests
-
-Please see [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
-
-## 📄 License
-
-This repository is licensed under the MIT License. See [LICENSE](LICENSE) for details.
-
-Note: The core LexiconTrail engine and proprietary algorithms are not included in this repository and remain the intellectual property of The AI Cowboys.
-
----
-
-<div align="center">
-  <strong>Built with ❤️ by The AI Cowboys</strong>
-  <br>
-  <em>Pioneering the Future of Agentic AI</em>
-</div>
